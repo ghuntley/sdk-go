@@ -20,7 +20,7 @@ declare package="model"
 declare targetdir="/tmp/serverlessworkflow"
 
 if [ ! -d "${targetdir}" ]; then
-	git clone git@github.com:serverlessworkflow/specification.git ${targetdir}
+	git clone https://github.com/serverlessworkflow/specification.git ${targetdir}
 
 fi
 
@@ -37,7 +37,7 @@ sed -i 's/$id/id/g' "${targetdir}/schema/workflow.json"
 sed -i 's/$id/id/g' "${targetdir}/schema/retries.json"
 
 
-./bin/gojsonschema -v \
+gojsonschema -v \
   --schema-package=https://serverlessworkflow.org/core/common.json=github.com/serverlessworkflow/sdk-go/model \
   --schema-output=https://serverlessworkflow.org/core/common.json=zz_generated.types_common.go \
   --schema-package=https://serverlessworkflow.org/core/events.json=github.com/serverlessworkflow/sdk-go/model \

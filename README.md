@@ -1,4 +1,4 @@
-# Go SDK for Serverless Workflow
+# Go SDK for Serverless Workflow  [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/serverlessworkflow/sdk-go)
 
 Here you will find all the [specification types](https://github.com/serverlessworkflow/specification/blob/main/schema/workflow.json) defined by our Json Schemas, in Go.
 
